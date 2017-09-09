@@ -6,7 +6,15 @@ public class VolleyBallCoach implements Coach {
 
 	public String getDailyWorkOut() {
 		// TODO Auto-generated method stub
-		return "Volley Ball - run the ground for 1hr";
+		return "Volley Ball - Physical Excercise for 15 mins";
+	}
+	
+	public void initialization(){
+		System.out.println("VolleyBallCoach : initializatin()");
+	}
+	
+	public void cleanUp(){
+		System.out.println("VolleyBallCoach : cleanUp()");
 	}
 
 }
