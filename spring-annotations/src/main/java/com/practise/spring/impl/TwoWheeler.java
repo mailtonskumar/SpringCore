@@ -4,6 +4,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.practise.spring.Vehicle;
+import com.practise.spring.service.VehicleService;
+
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
@@ -11,9 +13,11 @@ import javax.annotation.PreDestroy;
 @Scope("prototype")
 public class TwoWheeler implements Vehicle {
 
-	// define a default constructor
-		public TwoWheeler() {
-			System.out.println(">> TwoWheeler: inside default constructor");
+	    VehicleService twoWheelerService;
+	    
+	    // define a default constructor
+		public TwoWheeler(VehicleService twoWheelerService) {
+			this.twoWheelerService = twoWheelerService;
 		}
 		
 		// define my init method
